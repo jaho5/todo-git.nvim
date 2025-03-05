@@ -17,7 +17,7 @@ Task tracking for ADHD developers using Git. Simple, distraction-free, and frict
 
 ```lua
 use {
-  'yourusername/todo-git.nvim',
+  'jaho5/todo-git.nvim',
   config = function()
     require('todo-git').setup({
       -- Your config (all are optional)
@@ -34,7 +34,7 @@ use {
 
 ```lua
 {
-  'yourusername/todo-git.nvim',
+  'jaho5/todo-git.nvim',
   config = function()
     require('todo-git').setup({
       -- Your config here
