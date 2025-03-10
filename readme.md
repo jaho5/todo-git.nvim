@@ -6,7 +6,6 @@ Task tracking for ADHD developers using Git. Simple, distraction-free, and frict
 
 - Track tasks with a minimalist syntax
 - Use Git as a history tracker
-- Perfect for ADHD developers who need quick task toggles
 - No complex formatting or extra keystrokes
 - Automatically archive completed tasks
 - Smart subtask handling
