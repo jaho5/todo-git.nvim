@@ -221,16 +221,17 @@ function git_commit_completion(task_line, is_subtask)
   -- Get absolute paths for files
   local todo_path = vim.fn.expand(M.config.todo_file)
   local history_path = vim.fn.expand(M.config.completed_file)
+  local git_path = vim.fn.expand(M.config.git_dir)
   
   if is_subtask then
     commit_msg = "Completed subtask: " .. task_text
-    vim.fn.system("git -C " .. M.config.git_dir .. " add " .. todo_path)
+    vim.fn.system("git -C " .. git_path .. " add " .. todo_path)
   else
     commit_msg = "Completed: " .. task_text
-    vim.fn.system("git -C " .. M.config.git_dir .. " add " .. todo_path .. " " .. history_path)
+    vim.fn.system("git -C " .. git_path .. " add " .. todo_path .. " " .. history_path)
   end
   
-  vim.fn.system("git -C " .. M.config.git_dir .. " commit -m \"" .. commit_msg .. "\"")
+  vim.fn.system("git -C " .. git_path .. " commit -m \"" .. commit_msg .. "\"")
   
   vim.api.nvim_echo({{"Committed: " .. task_text, "None"}}, false, {})
 end
@@ -242,9 +243,10 @@ function git_commit_reopening(task_line)
   
   -- Get absolute path for todo file
   local todo_path = vim.fn.expand(M.config.todo_file)
+  local git_path = vim.fn.expand(M.config.git_dir)
   
-  vim.fn.system("git -C " .. M.config.git_dir .. " add " .. todo_path)
-  vim.fn.system("git -C " .. M.config.git_dir .. " commit -m \"" .. commit_msg .. "\"")
+  vim.fn.system("git -C " .. git_path .. " add " .. todo_path)
+  vim.fn.system("git -C " .. git_path .. " commit -m \"" .. commit_msg .. "\"")
   
   vim.api.nvim_echo({{"Committed task reopening: " .. task_text, "None"}}, false, {})
 end
