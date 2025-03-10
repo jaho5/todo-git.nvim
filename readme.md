@@ -1,6 +1,6 @@
 # todo-git.nvim
 
-Task tracking for ADHD developers using Git. Simple, distraction-free, and friction-less.
+Task tracking.
 
 ## Features
 
