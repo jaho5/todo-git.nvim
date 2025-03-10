@@ -60,13 +60,13 @@ use {
 
 ### Keybindings
 
-- `<Leader>c` - Toggle task completion
+- `<Leader>x` - Toggle task completion
 
 ### Workflow
 
 1. Edit your todo.txt file in Neovim
 2. Add tasks with `-` prefix
-3. Press `<Leader>c` on any line within a task to toggle its completion
+3. Press `<Leader>x` on any line within a task to toggle its completion
 4. Completed subtasks stay in the file (marked with +)
 5. Completed main tasks and their completed subtasks move to archive
 

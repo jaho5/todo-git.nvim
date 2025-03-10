@@ -251,7 +251,7 @@ end
 
 -- Set up keymaps
 function M.set_keymaps()
-  vim.api.nvim_set_keymap("n", "<Leader>c", 
+  vim.api.nvim_set_keymap("n", "<Leader>x", 
     "<cmd>lua require('todo-git').toggle_task()<CR>", 
     {noremap = true, silent = true})
 end
